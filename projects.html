@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sammy Collins| Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <span class="logo-text">SAMMY.<span class="logo-highlight">DEV</span></span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-number">01</span>
+                    <span class="nav-text">Home</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="resume.html" class="nav-link">
+                    <span class="nav-number">02</span>
+                    <span class="nav-text">Resume</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="projects.html" class="nav-link active">
+                    <span class="nav-number">03</span>
+                    <span class="nav-text">Projects</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <span class="nav-number">04</span>
+                    <span class="nav-text">Contact</span>
+                    <div class="nav-indicator"></div>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Background Elements -->
+        <div class="background-elements">
+            <div class="grid-lines"></div>
+            <div class="floating-element el-1"></div>
+            <div class="floating-element el-2"></div>
+            <div class="floating-element el-3"></div>
+        </div>
+        
+        <div class="container">
+            <!-- Projects Header -->
+            <header class="projects-header-section">
+                <div class="projects-header-content">
+                    <div class="projects-title-group">
+                        <h1 class="projects-main-title">
+                            <span class="title-text">Featured</span>
+                            <span class="title-highlight">Projects</span>
+                        </h1>
+                        <p class="projects-subtitle">Interactive showcase of my development work</p>
+                    </div>
+                    
+                    <div class="projects-counter">
+                        <div class="counter-display">
+                            <span class="current-project" id="currentProject">1</span>
+                            <span class="counter-separator">/</span>
+                            <span class="total-projects">4</span>
+                        </div>
+                        <p class="counter-label">Projects</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Projects Slideshow Section -->
+            <section class="projects-slideshow-section" aria-labelledby="projects-heading">
+                <div class="section-header">
+                    <h2 id="projects-heading">
+                        <i class="fas fa-project-diagram"></i>
+                        Project Portfolio
+                    </h2>
+                    <p class="section-subtitle">Use the navigation buttons to explore each project</p>
+                </div>
+                
+                <!-- Projects Container -->
+                <div class="projects-container" id="projectContainer">
+                    <!-- Project 1 -->
+                    <article class="project-card active" id="project1" data-project="1" aria-labelledby="project1-title" aria-describedby="project1-desc">
+                        <div class="project-visual">
+                            <div class="project-image-container">
+                                <img src="images/project-ecommerce.jpg" alt="Screenshot of E-Commerce Platform showing product listings and shopping cart interface" class="project-image">
+                                <div class="project-image-overlay">
+                                    <div class="overlay-content">
+                                        <span class="project-category">E-Commerce</span>
+                                        <span class="project-status">Live</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-visual-decoration">
+                                <div class="decoration-line"></div>
+                                <div class="decoration-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title" id="project1-title">E-Commerce Platform</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="far fa-calendar"></i>
+                                        <span>Completed: March 2025</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-code"></i>
+                                        <span>Full Stack Project</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-description" id="project1-desc">
+                                <p>A fully functional e-commerce platform with user authentication, product catalog, shopping cart, and secure payment processing. Features include admin dashboard for inventory management, customer reviews system, and order tracking functionality.</p>
+                                <p>Built with modern development practices including responsive design, accessibility compliance, and performance optimization.</p>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <h4>Technologies Used</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">React.js</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">Express.js</span>
+                                    <span class="tech-tag">Stripe API</span>
+                                    <span class="tech-tag">Redux</span>
+                                    <span class="tech-tag">JWT</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-features">
+                                <h4>Key Features</h4>
+                                <ul class="features-list">
+                                    <li>User authentication & authorization</li>
+                                    <li>Shopping cart with persistent storage</li>
+                                    <li>Secure payment processing</li>
+                                    <li>Admin dashboard for product management</li>
+                                    <li>Responsive design for all devices</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank" aria-label="View live demo of E-Commerce Platform">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" aria-label="View source code of E-Commerce Platform on GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 2 -->
+                    <article class="project-card" id="project2" data-project="2" aria-labelledby="project2-title" aria-describedby="project2-desc" hidden>
+                        <div class="project-visual">
+                            <div class="project-image-container">
+                                <img src="images/project-taskmanager.jpg" alt="Screenshot of Task Manager application showing task lists, calendar view, and progress tracking" class="project-image">
+                                <div class="project-image-overlay">
+                                    <div class="overlay-content">
+                                        <span class="project-category">Productivity</span>
+                                        <span class="project-status">Live</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-visual-decoration">
+                                <div class="decoration-line"></div>
+                                <div class="decoration-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title" id="project2-title">Advanced Task Manager</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="far fa-calendar"></i>
+                                        <span>Completed: January 2025</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-code"></i>
+                                        <span>Frontend Focus</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-description" id="project2-desc">
+                                <p>A comprehensive task management application with drag-and-drop functionality, calendar integration, and team collaboration features. Includes priority levels, due date tracking, progress monitoring, and notification system.</p>
+                                <p>Implements real-time updates using WebSockets and offers both light and dark mode themes for user preference.</p>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <h4>Technologies Used</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">Vuex</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">WebSockets</span>
+                                    <span class="tech-tag">SCSS</span>
+                                    <span class="tech-tag">Drag & Drop API</span>
+                                    <span class="tech-tag">Chart.js</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-features">
+                                <h4>Key Features</h4>
+                                <ul class="features-list">
+                                    <li>Drag-and-drop task organization</li>
+                                    <li>Calendar view with scheduling</li>
+                                    <li>Team collaboration and sharing</li>
+                                    <li>Progress tracking with charts</li>
+                                    <li>Real-time notifications</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank" aria-label="View live demo of Advanced Task Manager">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" aria-label="View source code of Advanced Task Manager on GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 3 -->
+                    <article class="project-card" id="project3" data-project="3" aria-labelledby="project3-title" aria-describedby="project3-desc" hidden>
+                        <div class="project-visual">
+                            <div class="project-image-container">
+                                <img src="images/project-weather.jpg" alt="Screenshot of Weather Dashboard showing current weather conditions, forecast charts, and location search" class="project-image">
+                                <div class="project-image-overlay">
+                                    <div class="overlay-content">
+                                        <span class="project-category">Weather API</span>
+                                        <span class="project-status">Live</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-visual-decoration">
+                                <div class="decoration-line"></div>
+                                <div class="decoration-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title" id="project3-title">Weather Dashboard</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="far fa-calendar"></i>
+                                        <span>Completed: November 2023</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-code"></i>
+                                        <span>API Integration</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-description" id="project3-desc">
+                                <p>A responsive weather application that fetches data from multiple weather APIs to provide accurate forecasts. Features include location-based weather, 7-day forecasts, severe weather alerts, and historical data comparison.</p>
+                                <p>Optimized for performance with caching strategy and offline functionality using service workers for reliable access in low-connectivity situations.</p>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <h4>Technologies Used</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">OpenWeather API</span>
+                                    <span class="tech-tag">Chart.js</span>
+                                    <span class="tech-tag">Service Workers</span>
+                                    <span class="tech-tag">Local Storage</span>
+                                    <span class="tech-tag">Geolocation API</span>
+                                    <span class="tech-tag">PWA</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-features">
+                                <h4>Key Features</h4>
+                                <ul class="features-list">
+                                    <li>Real-time weather data</li>
+                                    <li>7-day detailed forecast</li>
+                                    <li>Location-based search</li>
+                                    <li>Severe weather alerts</li>
+                                    <li>Offline functionality</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank" aria-label="View live demo of Weather Dashboard">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" aria-label="View source code of Weather Dashboard on GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 4 -->
+                    <article class="project-card" id="project4" data-project="4" aria-labelledby="project4-title" aria-describedby="project4-desc" hidden>
+                        <div class="project-visual">
+                            <div class="project-image-container">
+                                <img src="images/project-portfolio.jpg" alt="Screenshot of Portfolio Website showing dark theme design with project showcase and contact form" class="project-image">
+                                <div class="project-image-overlay">
+                                    <div class="overlay-content">
+                                        <span class="project-category">Portfolio</span>
+                                        <span class="project-status">Current</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-visual-decoration">
+                                <div class="decoration-line"></div>
+                                <div class="decoration-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title" id="project4-title">Developer Portfolio</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="far fa-calendar"></i>
+                                        <span>Completed: December 2025</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-code"></i>
+                                        <span>Frontend Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-description" id="project4-desc">
+                                <p>A responsive portfolio website showcasing projects, skills, and professional experience. Features include dark/light theme toggle, interactive project slideshow, contact form with validation, and fully accessible design.</p>
+                                <p>Built with semantic HTML5, modern CSS3 features including Grid and Flexbox, and vanilla JavaScript for interactivity without any frameworks.</p>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <h4>Technologies Used</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">CSS Grid</span>
+                                    <span class="tech-tag">Flexbox</span>
+                                    <span class="tech-tag">Accessibility</span>
+                                    <span class="tech-tag">Responsive Design</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-features">
+                                <h4>Key Features</h4>
+                                <ul class="features-list">
+                                    <li>Dark/light theme toggle</li>
+                                    <li>Interactive project slideshow</li>
+                                    <li>Contact form with validation</li>
+                                    <li>WCAG accessibility compliant</li>
+                                    <li>Mobile-first responsive design</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="index.html" class="project-link" aria-label="View live demo of Developer Portfolio (current website)">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" aria-label="View source code of Developer Portfolio on GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Projects Navigation -->
+                <div class="projects-navigation">
+                    <button class="nav-btn prev-btn" id="prevBtn" aria-label="View previous project">
+                        <i class="fas fa-chevron-left"></i>
+                        <span>Previous</span>
+                    </button>
+                    
+                    <div class="projects-pagination">
+                        <button class="page-indicator active" data-project="1" aria-label="Go to project 1" aria-current="true"></button>
+                        <button class="page-indicator" data-project="2" aria-label="Go to project 2"></button>
+                        <button class="page-indicator" data-project="3" aria-label="Go to project 3"></button>
+                        <button class="page-indicator" data-project="4" aria-label="Go to project 4"></button>
+                    </div>
+                    
+                    <button class="nav-btn next-btn" id="nextBtn" aria-label="View next project">
+                        <span>Next</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Projects Instructions -->
+                <div class="projects-instructions">
+                    <div class="instruction-item">
+                        <i class="fas fa-mouse-pointer"></i>
+                        <span>Click navigation buttons or dots to switch projects</span>
+                    </div>
+                    <div class="instruction-item">
+                        <i class="fas fa-keyboard"></i>
+                        <span>Use left/right arrow keys for keyboard navigation</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Summary -->
+            <section class="projects-summary-section">
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h3>Project Statistics</h3>
+                        <div class="summary-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">4</div>
+                                <div class="stat-label">Featured Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Total Technologies</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Code Quality</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h3>Development Approach</h3>
+                        <p>All projects follow modern web development practices including mobile-first responsive design, accessibility compliance, clean code architecture, and performance optimization. Each project includes proper documentation and version control.</p>
+                        <a href="contact.html" class="summary-link">
+                            <i class="fas fa-handshake"></i>
+                            <span>Interested in my work? Let's collaborate</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">JJ<span class="logo-dot">.</span></div>
+                    <p class="footer-quote">Building the future, one line of code at a time.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="CodePen">
+                            <i class="fab fa-codepen"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navigation</h4>
+                        <a href="index.html">Home</a>
+                        <a href="resume.html">Resume</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <a href="mailto:jerinsjuma@gmail.com">jerinsjuma@gmail.com</a>
+                        <a href="tel:+16135551234">+(254) 112-962-582</a>
+                        <a href="#">LinkedIn Profile</a>
+                        <a href="#">GitHub Portfolio</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Education</h4>
+                        <a href="https://www.algonquincollege.com" target="_blank">Algonquin College</a>
+                        <a href="#">Computer Science</a>
+                        <a href="#">CST8326 Course</a>
+                        <a href="#">Student Resources</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; Sammy Collins. All rights reserved. | CST8326 Assignment 1 - Personal Portfolio</p>
+                <p class="footer-note">Built with HTML5, CSS3 & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const menuToggle = document.getElementById('menuToggle');
+        const themeToggle = document.getElementById('themeToggle');
+        const projectContainer = document.getElementById('projectContainer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageIndicators = document.querySelectorAll('.page-indicator');
+        const currentProjectElement = document.getElementById('currentProject');
+        
+        // Project Slideshow Variables
+        let currentProjectIndex = 1;
+        const totalProjects = 4;
+        let autoSlideInterval;
+        
+        // Mobile Menu Toggle
+        menuToggle.addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            document.querySelector('.hamburger').classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.hamburger').classList.remove('active');
+            });
+        });
+        
+        // Theme Toggle
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const icon = themeToggle.querySelector('i');
+            if (document.body.classList.contains('light-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+        
+        // Project Slideshow Functions
+        function showProject(projectNumber) {
+            // Validate project number
+            if (projectNumber < 1) projectNumber = totalProjects;
+            if (projectNumber > totalProjects) projectNumber = 1;
+            
+            // Update current index
+            currentProjectIndex = projectNumber;
+            
+            // Hide all projects
+            const projects = document.querySelectorAll('.project-card');
+            projects.forEach(project => {
+                project.classList.remove('active');
+                project.setAttribute('hidden', '');
+            });
+            
+            // Show selected project
+            const selectedProject = document.getElementById(`project${projectNumber}`);
+            selectedProject.classList.add('active');
+            selectedProject.removeAttribute('hidden');
+            
+            // Update indicators
+            pageIndicators.forEach((indicator, index) => {
+                if (index + 1 === projectNumber) {
+                    indicator.classList.add('active');
+                    indicator.setAttribute('aria-current', 'true');
+                } else {
+                    indicator.classList.remove('active');
+                    indicator.removeAttribute('aria-current');
+                }
+            });
+            
+            // Update counter display
+            currentProjectElement.textContent = projectNumber;
+            
+            // Update URL hash for direct linking
+            window.location.hash = `project${projectNumber}`;
+            
+            // Announce change for screen readers
+            announceProjectChange(projectNumber);
+        }
+        
+        function announceProjectChange(projectNumber) {
+            const projectTitle = document.querySelector(`#project${projectNumber} .project-title`).textContent;
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.setAttribute('aria-atomic', 'true');
+            announcement.className = 'sr-only';
+            announcement.textContent = `Now viewing project ${projectNumber}: ${projectTitle}`;
+            document.body.appendChild(announcement);
+            
+            // Remove after announcement
+            setTimeout(() => {
+                announcement.remove();
+            }, 1000);
+        }
+        
+        function nextProject() {
+            showProject(currentProjectIndex + 1);
+        }
+        
+        function prevProject() {
+            showProject(currentProjectIndex - 1);
+        }
+        
+        function goToProject(projectNumber) {
+            showProject(projectNumber);
+        }
+        
+        function startAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                nextProject();
+            }, 8000); // Change project every 8 seconds
+        }
+        
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+        
+        // Event Listeners for Navigation
+        prevBtn.addEventListener('click', () => {
+            prevProject();
+            stopAutoSlide();
+            startAutoSlide(); // Restart with reset timer
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            nextProject();
+            stopAutoSlide();
+            startAutoSlide(); // Restart with reset timer
+        });
+        
+        // Page Indicator Click Events
+        pageIndicators.forEach(indicator => {
+            indicator.addEventListener('click', () => {
+                const projectNumber = parseInt(indicator.getAttribute('data-project'));
+                goToProject(projectNumber);
+                stopAutoSlide();
+                startAutoSlide(); // Restart with reset timer
+            });
+        });
+        
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            // Only handle if user is not interacting with form elements
+            if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+                switch(e.key) {
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        prevProject();
+                        stopAutoSlide();
+                        startAutoSlide();
+                        break;
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        nextProject();
+                        stopAutoSlide();
+                        startAutoSlide();
+                        break;
+                    case '1':
+                    case '2':
+                    case '3':
+                    case '4':
+                        e.preventDefault();
+                        goToProject(parseInt(e.key));
+                        stopAutoSlide();
+                        startAutoSlide();
+                        break;
+                }
+            }
+        });
+        
+        // Touch/Swipe Support for Mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        projectContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+        
+        projectContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const swipeDistance = touchEndX - touchStartX;
+            
+            if (Math.abs(swipeDistance) > swipeThreshold) {
+                if (swipeDistance > 0) {
+                    // Swipe right - previous project
+                    prevProject();
+                } else {
+                    // Swipe left - next project
+                    nextProject();
+                }
+                stopAutoSlide();
+                startAutoSlide();
+            }
+        }
+        
+        // Initialize Project Slideshow
+        function initializeProjects() {
+            // Check URL hash on page load
+            const hash = window.location.hash;
+            if (hash && hash.startsWith('#project')) {
+                const projectNum = parseInt(hash.replace('#project', ''));
+                if (projectNum >= 1 && projectNum <= totalProjects) {
+                    goToProject(projectNum);
+                } else {
+                    showProject(1);
+                }
+            } else {
+                showProject(1);
+            }
+            
+            // Start auto slideshow
+            startAutoSlide();
+            
+            // Pause auto-slide on hover
+            projectContainer.addEventListener('mouseenter', stopAutoSlide);
+            projectContainer.addEventListener('mouseleave', startAutoSlide);
+            
+            // Pause auto-slide on focus
+            projectContainer.addEventListener('focusin', stopAutoSlide);
+            projectContainer.addEventListener('focusout', startAutoSlide);
+        }
+        
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize projects slideshow
+            initializeProjects();
+            
+            // Add animation class to header
+            setTimeout(() => {
+                document.querySelector('.projects-header-section').classList.add('loaded');
+            }, 300);
+            
+            // Focus management for accessibility
+            const mainContent = document.querySelector('main');
+            mainContent.setAttribute('tabindex', '-1');
+            mainContent.focus();
+        });
+        
+        // Handle browser navigation (back/forward buttons)
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash;
+            if (hash && hash.startsWith('#project')) {
+                const projectNum = parseInt(hash.replace('#project', ''));
+                if (projectNum >= 1 && projectNum <= totalProjects) {
+                    goToProject(projectNum);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sammy Collins | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <span class="logo-text">SAMMY.<span class="logo-highlight">DEV</span></span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-number">01</span>
+                    <span class="nav-text">Home</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="resume.html" class="nav-link">
+                    <span class="nav-number">02</span>
+                    <span class="nav-text">Resume</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="projects.html" class="nav-link">
+                    <span class="nav-number">03</span>
+                    <span class="nav-text">Projects</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="contact.html" class="nav-link active">
+                    <span class="nav-number">04</span>
+                    <span class="nav-text">Contact</span>
+                    <div class="nav-indicator"></div>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="background-elements">
+            <div class="grid-lines"></div>
+            <div class="floating-element el-1"></div>
+            <div class="floating-element el-2"></div>
+            <div class="floating-element el-3"></div>
+            <div class="pulse-circle"></div>
+        </div>
+        
+        <div class="container">
+            <!-- Contact Header -->
+            <header class="contact-header">
+                <div class="contact-badge">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>Get In Touch</span>
+                </div>
+                
+                <h1 class="contact-title">
+                    <span class="title-main">Contact Me</span>
+                    <span class="title-sub">Let's Build Something Amazing Together</span>
+                </h1>
+                
+                <p class="contact-intro">
+                    Have a project in mind? Looking for a developer? Or just want to connect? 
+                    Fill out the form below and I'll get back to you as soon as possible.
+                </p>
+            </header>
+
+            <div class="contact-grid">
+                <!-- Left Column: Contact Form -->
+                <div class="contact-form-section">
+                    <div class="form-card">
+                        <div class="form-header">
+                            <h2>
+                                <i class="fas fa-paper-plane"></i>
+                                Send a Message
+                            </h2>
+                            <p class="form-subtitle">All fields are required</p>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label for="name" class="form-label">
+                                    <span class="label-text">Full Name</span>
+                                    <span class="required-indicator">*</span>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        name="name" 
+                                        class="form-input"
+                                        placeholder="Enter your full name"
+                                        required
+                                        aria-describedby="name-error"
+                                    >
+                                </div>
+                                <div class="error-message" id="name-error" aria-live="polite"></div>
+                                <div class="input-hint">Please enter your first and last name</div>
+                            </div>
+                            
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <span class="label-text">Email Address</span>
+                                    <span class="required-indicator">*</span>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        class="form-input"
+                                        placeholder="Enter your email address"
+                                        required
+                                        aria-describedby="email-error"
+                                    >
+                                </div>
+                                <div class="error-message" id="email-error" aria-live="polite"></div>
+                                <div class="input-hint">We'll never share your email with anyone else</div>
+                            </div>
+                            
+                            <!-- Subject Field -->
+                            <div class="form-group">
+                                <label for="subject" class="form-label">
+                                    <span class="label-text">Subject</span>
+                                    <span class="required-indicator">*</span>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-tag"></i>
+                                    </div>
+                                    <input 
+                                        type="text" 
+                                        id="subject" 
+                                        name="subject" 
+                                        class="form-input"
+                                        placeholder="What is this regarding?"
+                                        required
+                                        minlength="5"
+                                        maxlength="100"
+                                        aria-describedby="subject-error"
+                                    >
+                                </div>
+                                <div class="error-message" id="subject-error" aria-live="polite"></div>
+                                <div class="input-hint">
+                                    <span class="char-count" id="subject-counter">0/100</span>
+                                    characters (min: 5, max: 100)
+                                </div>
+                            </div>
+                            
+                            <!-- Message Field -->
+                            <div class="form-group">
+                                <label for="message" class="form-label">
+                                    <span class="label-text">Message</span>
+                                    <span class="required-indicator">*</span>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-icon textarea-icon">
+                                        <i class="fas fa-comment-dots"></i>
+                                    </div>
+                                    <textarea 
+                                        id="message" 
+                                        name="message" 
+                                        class="form-input form-textarea"
+                                        placeholder="Type your message here..."
+                                        rows="6"
+                                        required
+                                        minlength="20"
+                                        maxlength="1000"
+                                        aria-describedby="message-error"
+                                    ></textarea>
+                                </div>
+                                <div class="error-message" id="message-error" aria-live="polite"></div>
+                                <div class="input-hint">
+                                    <span class="char-count" id="message-counter">0/1000</span>
+                                    characters (min: 20, max: 1000)
+                                </div>
+                            </div>
+                            
+                            <!-- Form Actions -->
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary submit-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-icon">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </span>
+                                    <span class="btn-hover"></span>
+                                </button>
+                                
+                                <button type="reset" class="btn btn-secondary reset-btn">
+                                    <span class="btn-text">Clear Form</span>
+                                    <span class="btn-icon">
+                                        <i class="fas fa-redo"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            
+                            <!-- Form Status -->
+                            <div class="form-status" id="formStatus" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Contact Info & Details -->
+                <div class="contact-info-section">
+                    <!-- Contact Methods -->
+                    <div class="info-card">
+                        <div class="info-header">
+                            <h3>
+                                <i class="fas fa-address-card"></i>
+                                Contact Information
+                            </h3>
+                        </div>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon email-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Email</h4>
+                                    <a href="mailto:jerinsjuma@gmail.com" class="method-link">
+                                        jerinsjuma@gmail.com
+                                    </a>
+                                    <p class="method-hint">Typically replies within 24 hours</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon phone-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+14372159789" class="method-link">
+                                        +1 (437) 215-9789
+                                    </a>
+                                    <p class="method-hint">Available Mon-Fri, 9AM-6PM EST</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon location-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Location</h4>
+                                    <span class="method-text">Nairobi, Kenya</span>
+                                    <p class="method-hint">Open to remote opportunities worldwide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="info-card">
+                        <div class="info-header">
+                            <h3>
+                                <i class="fas fa-share-alt"></i>
+                                Connect With Me
+                            </h3>
+                        </div>
+                        
+                        <div class="social-grid">
+                            <a href="#" class="social-card linkedin">
+                                <div class="social-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div class="social-content">
+                                    <h4>LinkedIn</h4>
+                                    <p>Professional Network</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="social-card github">
+                                <div class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="social-content">
+                                    <h4>GitHub</h4>
+                                    <p>Code Repository</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="social-card twitter">
+                                <div class="social-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="social-content">
+                                    <h4>Twitter</h4>
+                                    <p>Tech Updates</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="social-card codepen">
+                                <div class="social-icon">
+                                    <i class="fab fa-codepen"></i>
+                                </div>
+                                <div class="social-content">
+                                    <h4>CodePen</h4>
+                                    <p>Code Experiments</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Response Time -->
+                    <div class="info-card response-card">
+                        <div class="response-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="response-content">
+                            <h4>Response Time</h4>
+                            <p>I strive to respond to all inquiries within <strong>24 hours</strong> during weekdays.</p>
+                            <div class="response-stats">
+                                <div class="stat">
+                                    <div class="stat-number">1h</div>
+                                    <div class="stat-label">Average First Response</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number">99%</div>
+                                    <div class="stat-label">Response Rate</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- College Info -->
+                    <div class="info-card college-card">
+                        <div class="college-header">
+                            <h4>
+                                <i class="fas fa-graduation-cap"></i>
+                                Student at Algonquin College
+                            </h4>
+                        </div>
+                        <div class="college-content">
+                            <p>Currently completing Computer Science</p>
+                            <a href="https://www.algonquincollege.com" target="_blank" class="college-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Visit College Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact FAQ -->
+            <section class="contact-faq">
+                <div class="faq-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Quick answers to common questions</p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <h3>What types of projects do you take on?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I specialize in web development projects including custom websites, web applications, e-commerce solutions, and API integrations. I'm particularly interested in projects involving modern JavaScript frameworks and innovative UI/UX design.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <h3>What is your typical response time?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I aim to respond to all inquiries within 24 hours on weekdays. For urgent matters, please indicate "URGENT" in your subject line, and I'll prioritize your message.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <h3>Do you offer freelance services?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, I'm available for freelance web development projects. I can work on both short-term and long-term engagements, either remotely or on-site in the Ottawa area.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <h3>Are you available for internships or junior positions?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! As a Computer Science student at Algonquin College, I'm actively seeking internship opportunities and junior developer positions to further develop my skills and contribute to meaningful projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">JJ<span class="logo-dot">.</span></div>
+                    <p class="footer-quote">Building the future, one line of code at a time.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-codepen"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navigation</h4>
+                        <a href="index.html">Home</a>
+                        <a href="resume.html">Resume</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <a href="mailto:jerinsjuma@gmail.com">jerinsjuma@gmail.com</a>
+                        <a href="tel:+254112962582">+1 (254) 112-962-582</a>
+                        <a href="#">LinkedIn Profile</a>
+                        <a href="#">GitHub Portfolio</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Education</h4>
+                        <a href="https://www.algonquincollege.com" target="_blank">Algonquin College</a>
+                        <a href="#">Computer Science</a>
+                        <a href="#">CST8326 Course</a>
+                        <a href="#">Student Resources</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sammy Collins. All rights reserved. | CST8326 Assignment 1 - Personal Portfolio</p>
+                <p class="footer-note">Built with HTML5, CSS3 & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const menuToggle = document.getElementById('menuToggle');
+        const themeToggle = document.getElementById('themeToggle');
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        
+        // Character counters
+        const subjectInput = document.getElementById('subject');
+        const messageInput = document.getElementById('message');
+        const subjectCounter = document.getElementById('subject-counter');
+        const messageCounter = document.getElementById('message-counter');
+        
+        // Mobile Menu Toggle
+        menuToggle.addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            document.querySelector('.hamburger').classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.hamburger').classList.remove('active');
+            });
+        });
+        
+        // Theme Toggle
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const icon = themeToggle.querySelector('i');
+            if (document.body.classList.contains('light-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+        
+        // Character Counters
+        function updateCharCounter(input, counter, maxLength) {
+            const currentLength = input.value.length;
+            counter.textContent = `${currentLength}/${maxLength}`;
+            
+            // Change color based on length
+            if (currentLength > maxLength * 0.9) {
+                counter.style.color = 'var(--accent-primary)';
+            } else if (currentLength > maxLength * 0.75) {
+                counter.style.color = 'var(--accent-secondary)';
+            } else {
+                counter.style.color = 'var(--text-muted)';
+            }
+        }
+        
+        subjectInput.addEventListener('input', () => {
+            updateCharCounter(subjectInput, subjectCounter, 100);
+        });
+        
+        messageInput.addEventListener('input', () => {
+            updateCharCounter(messageInput, messageCounter, 1000);
+        });
+        
+        // Initialize counters
+        updateCharCounter(subjectInput, subjectCounter, 100);
+        updateCharCounter(messageInput, messageCounter, 1000);
+        
+        // Form Validation
+        function showError(inputId, message) {
+            const input = document.getElementById(inputId);
+            const errorElement = document.getElementById(`${inputId}-error`);
+            
+            input.classList.add('error');
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+            
+            // Focus on the first error
+            if (!document.querySelector('.error:focus')) {
+                input.focus();
+            }
+        }
+        
+        function clearError(inputId) {
+            const input = document.getElementById(inputId);
+            const errorElement = document.getElementById(`${inputId}-error`);
+            
+            input.classList.remove('error');
+            errorElement.textContent = '';
+            errorElement.style.display = 'none';
+        }
+        
+        function validateField(inputId, validationFn) {
+            const input = document.getElementById(inputId);
+            const value = input.value.trim();
+            
+            clearError(inputId);
+            
+            if (!validationFn(value)) {
+                let message = '';
+                switch(inputId) {
+                    case 'name':
+                        message = 'Name is required';
+                        break;
+                    case 'email':
+                        message = 'Please enter a valid email address';
+                        break;
+                    case 'subject':
+                        if (value.length < 5) {
+                            message = 'Subject must be at least 5 characters';
+                        } else if (value.length > 100) {
+                            message = 'Subject must be less than 100 characters';
+                        }
+                        break;
+                    case 'message':
+                        if (value.length < 20) {
+                            message = 'Message must be at least 20 characters';
+                        } else if (value.length > 1000) {
+                            message = 'Message must be less than 1000 characters';
+                        }
+                        break;
+                }
+                showError(inputId, message);
+                return false;
+            }
+            return true;
+        }
+        
+        function validateName(name) {
+            return name.length > 0;
+        }
+        
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        function validateSubject(subject) {
+            return subject.length >= 5 && subject.length <= 100;
+        }
+        
+        function validateMessage(message) {
+            return message.length >= 20 && message.length <= 1000;
+        }
+        
+        // Real-time validation
+        subjectInput.addEventListener('blur', () => {
+            validateField('subject', validateSubject);
+        });
+        
+        messageInput.addEventListener('blur', () => {
+            validateField('message', validateMessage);
+        });
+        
+        document.getElementById('name').addEventListener('blur', () => {
+            validateField('name', validateName);
+        });
+        
+        document.getElementById('email').addEventListener('blur', () => {
+            validateField('email', validateEmail);
+        });
+        
+        // Form Submission
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate all fields
+            const isNameValid = validateField('name', validateName);
+            const isEmailValid = validateField('email', validateEmail);
+            const isSubjectValid = validateField('subject', validateSubject);
+            const isMessageValid = validateField('message', validateMessage);
+            
+            if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+                // Show loading state
+                const submitBtn = document.querySelector('.submit-btn');
+                const originalText = submitBtn.querySelector('.btn-text').textContent;
+                submitBtn.querySelector('.btn-text').textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission (in a real scenario, this would be an AJAX call)
+                setTimeout(() => {
+                    // Show success message
+                    formStatus.innerHTML = `
+                        <div class="status-success">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Message Sent Successfully!</h4>
+                                <p>Thank you for your message. I'll get back to you within 24 hours.</p>
+                            </div>
+                        </div>
+                    `;
+                    formStatus.style.display = 'block';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    updateCharCounter(subjectInput, subjectCounter, 100);
+                    updateCharCounter(messageInput, messageCounter, 1000);
+                    
+                    // Reset button
+                    submitBtn.querySelector('.btn-text').textContent = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Clear status message after 5 seconds
+                    setTimeout(() => {
+                        formStatus.style.display = 'none';
+                    }, 5000);
+                }, 1500);
+            } else {
+                // Show error message
+                formStatus.innerHTML = `
+                    <div class="status-error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div>
+                            <h4>Please fix the errors above</h4>
+                            <p>Some fields require your attention before submitting.</p>
+                        </div>
+                    </div>
+                `;
+                formStatus.style.display = 'block';
+                
+                // Auto-hide error after 5 seconds
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            }
+        });
+        
+        // Form Reset
+        contactForm.addEventListener('reset', () => {
+            // Clear all errors
+            ['name', 'email', 'subject', 'message'].forEach(id => {
+                clearError(id);
+            });
+            
+            // Reset counters
+            updateCharCounter(subjectInput, subjectCounter, 100);
+            updateCharCounter(messageInput, messageCounter, 1000);
+            
+            // Hide status message
+            formStatus.style.display = 'none';
+        });
+        
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = answer.classList.contains('open');
+                
+                // Close all other FAQ answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('open');
+                });
+                
+                // Toggle current answer
+                if (!isOpen) {
+                    answer.classList.add('open');
+                }
+            });
+        });
+        
+        // Accessibility: Add keyboard navigation to form
+        contactForm.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault();
+            }
+        });
+        
+        // Initialize form with focus on first field
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('name').focus();
+        });
+    </script>
+</body>
+</html>
