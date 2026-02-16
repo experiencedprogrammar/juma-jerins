@@ -261,89 +261,9 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        const typingText = document.getElementById('typingText');
-        const cursor = document.querySelector('.cursor');
-    
-        // Typing Effect
-        const texts = [
-            "Full Stack Developer",
-            "UI/UX Enthusiast",
-            "Problem Solver",
-            "Tech Innovator"
-        ];
-    
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let isPaused = false;
-    
-        function typeEffect() {
-            const currentText = texts[textIndex];
-    
-            if (!isDeleting && !isPaused) {
-                typingText.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-    
-                if (charIndex === currentText.length) {
-                    isPaused = true;
-                    setTimeout(() => {
-                        isPaused = false;
-                        isDeleting = true;
-                    }, 1500);
-                }
-            } else if (isDeleting && !isPaused) {
-                typingText.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-    
-                if (charIndex === 0) {
-                    isDeleting = false;
-                    textIndex = (textIndex + 1) % texts.length;
-                }
-            }
-    
-            setTimeout(typeEffect, isDeleting ? 50 : 100);
-        }
-    
-        function cursorBlink() {
-            cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
-            setTimeout(cursorBlink, 500);
-        }
-    
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(typeEffect, 1000);
-            setTimeout(cursorBlink, 1500);
-    
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-in');
-                    }
-                });
-            }, { threshold: 0.1 });
-    
-            document.querySelectorAll('.about-card').forEach(card => {
-                observer.observe(card);
-            });
-        });
-    
-        function animateFloatingElements() {
-            document.querySelectorAll('.floating-element').forEach((el, i) => {
-                el.style.animation = `float 6s ease-in-out ${i * 0.5}s infinite alternate`;
-            });
-        }
-    
-        animateFloatingElements();
-    </script>
-  <script>
-    fetch("navbar.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("navbar-placeholder").innerHTML = data;
-        })
-        .catch(err => console.error("Navbar load error:", err));
-</script>
+ <!-- JavaScript -->
+<script src="index.js"></script>
+
     
 </body>
 </html>
