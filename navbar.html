@@ -1,118 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
-<!-- Navigation -->
 <nav class="navbar">
-    <div class="nav-container">
+  <div class="nav-container">
 
-        <!-- Logo -->
-        <div class="logo">
-            <div class="logo-icon">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-            <span class="logo-text">JERINS.<span class="logo-highlight">DEV</span></span>
-        </div>
-
-        <!-- Navigation Menu -->
-        <div class="nav-menu" id="navMenu">
-            <a href="index.html" class="nav-link">
-                <span class="nav-number">01</span>
-                <span class="nav-text">Home</span>
-                <div class="nav-indicator"></div>
-            </a>
-
-            <a href="resume.html" class="nav-link">
-                <span class="nav-number">02</span>
-                <span class="nav-text">Resume</span>
-                <div class="nav-indicator"></div>
-            </a>
-
-            <a href="projects.html" class="nav-link">
-                <span class="nav-number">03</span>
-                <span class="nav-text">Projects</span>
-                <div class="nav-indicator"></div>
-            </a>
-
-            <a href="contact.html" class="nav-link">
-                <span class="nav-number">04</span>
-                <span class="nav-text">Contact</span>
-                <div class="nav-indicator"></div>
-            </a>
-        </div>
-
-        <!-- Actions -->
-        <div class="nav-actions">
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </button>
-
-            <button class="menu-toggle" id="menuToggle">
-                <span class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </button>
-        </div>
-
+    <!-- Logo -->
+    <div class="logo">
+      <div class="logo-icon">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <span class="logo-text">JERINS.<span class="logo-highlight">DEV</span></span>
     </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu" id="navMenu">
+      <a href="index.html" class="nav-link">
+        <span class="nav-number">01</span>
+        <span class="nav-text">Home</span>
+        <div class="nav-indicator"></div>
+      </a>
+
+      <a href="resume.html" class="nav-link">
+        <span class="nav-number">02</span>
+        <span class="nav-text">Resume</span>
+        <div class="nav-indicator"></div>
+      </a>
+
+      <a href="projects.html" class="nav-link">
+        <span class="nav-number">03</span>
+        <span class="nav-text">Projects</span>
+        <div class="nav-indicator"></div>
+      </a>
+
+      <a href="contact.html" class="nav-link">
+        <span class="nav-number">04</span>
+        <span class="nav-text">Contact</span>
+        <div class="nav-indicator"></div>
+      </a>
+    </div>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+
+  </div>
 </nav>
-
-<!-- JavaScript -->
-<script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
-    const hamburger = document.querySelector(".hamburger");
-    const themeToggle = document.getElementById("themeToggle");
-
-    // Mobile Menu Toggle
-    menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        hamburger.classList.toggle("active");
-    });
-
-    // Close menu on link click (mobile)
-    document.querySelectorAll(".nav-link").forEach(link => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("active");
-            hamburger.classList.remove("active");
-        });
-    });
-
-    // Theme Toggle
-    themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("light-theme");
-        const icon = themeToggle.querySelector("i");
-
-        if (document.body.classList.contains("light-theme")) {
-            icon.classList.replace("fa-moon", "fa-sun");
-        } else {
-            icon.classList.replace("fa-sun", "fa-moon");
-        }
-    });
-
-    // Active link based on current page
-    const currentPage = location.pathname.split("/").pop();
-    document.querySelectorAll(".nav-link").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("active");
-        }
-    });
-</script>
-
-</body>
-</html>
